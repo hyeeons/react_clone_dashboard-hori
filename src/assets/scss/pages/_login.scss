@@ -1,0 +1,57 @@
+.login {
+    &__title {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $primaryDark;
+    }
+    &__form {
+        .v-label {
+            color: $primaryLight3;
+        }
+    }
+    &__goto {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 50px auto 0;
+        font-size: 0.875rem;
+        font-weight: 400;
+        a {
+            display: block;
+            position: relative;
+            color: $primaryLight;
+            &:first-child::before {
+                display: none;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -15px;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 10px;
+                background: $primaryLight;
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+.signup {
+    &__step {
+        margin-bottom: 40px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $primaryDark;
+    }
+    &__label {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        color: $primaryDark;
+    }
+}

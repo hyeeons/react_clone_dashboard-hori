@@ -1,0 +1,45 @@
+.v-field {
+    box-shadow: none;
+    border-radius: 16px;
+    border: 1px solid $lineSearch;
+    background: $white;
+    &--focused {
+        border: 1px solid $primary;
+        background: $background;
+    }
+    &--variant-filled {
+        .v-field__overlay {
+            background: transparent;
+        }
+    }
+    .v-field__outline {
+        --v-field-border-width: 0;
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    &--variant-underlined {
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid $lineGray;
+        .v-field__input {
+            position: relative;
+            &:focus {
+                &::after {
+                    width: 100%;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 10px;
+                width: 0;
+                background: $primaryDark;
+            }
+        }
+    }
+}

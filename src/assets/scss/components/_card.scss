@@ -1,0 +1,97 @@
+// card style
+
+.v-card {
+    display: flex;
+    align-items: center;
+    min-height: 65px;
+    padding-top: 4px;
+    border-radius: 16px;
+    background: $white;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.exchange {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .v-card {
+        display: flex;
+        // align-items: center;
+        min-height: 65px;
+        padding-top: 4px;
+        border-radius: 16px;
+        background: $white;
+        box-shadow: none;
+        transition: all 0.3s ease-in-out;
+        border: none;
+        &:hover > .v-card__overlay {
+            opacity: 0;
+        }
+    }
+    .v-avatar {
+        margin-right: 7px;
+        width: 30px;
+        height: 30px;
+    }
+    .v-card-item__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .v-card-title {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: $primaryDark;
+    }
+    .v-card-subtitle {
+        padding: 0;
+        color: $primaryLight;
+        font-size: 0.8125rem;
+    }
+    .v-card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem 0 0;
+        font-weight: 700;
+        text-align: right;
+    }
+    .cmpr {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        opacity: 0.7;
+    }
+
+    // &:hover {
+    //     background: $primary;
+    //     .v-card-title {
+    //         color: $white;
+    //     }
+    //     .v-card-subtitle {
+    //         color: $white;
+    //         opacity: 0.7;
+    //     }
+    //     .v-card-text {
+    //         color: $white;
+    //     }
+    //     .cmpr {
+    //         color: $white;
+    //     }
+
+    //     .up {
+    //         color: $upHover;
+    //     }
+    //     .down {
+    //         color: $downHover;
+    //     }
+    //     .flat {
+    //         color: $white;
+    //         &::after {
+    //             background: $white;
+    //         }
+    //     }
+    // }
+}

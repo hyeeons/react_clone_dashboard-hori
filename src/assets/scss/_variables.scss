@@ -1,0 +1,64 @@
+// @import '~vuetify/src/styles/styles.sass';
+// https://vuetifyjs.com/en/features/sass-variables/#installation
+
+:root {
+    --v-layout-bottom: 60px;
+}
+
+// color
+$txtDefult: #202020;
+$primary: #438bf9;
+$primaryLight: #5a5e71;
+$primaryLight2: #e9f2ff;
+$primaryLight3: #a6aac2;
+$primaryDark: #111b56;
+$secondary: #ff5722;
+
+$up: #d61b26;
+$upHover: #fff8f8;
+$upBg: #fbf1ef;
+$upBar: #ffdbdd;
+$down: #1aaba2;
+$down2: #484fce;
+$downHover: #b3fffa;
+$downBg: #f1f8f8;
+$downBar: #d2ebea;
+$flat: #111b56;
+$flatBar: rgba($flat, 0.1);
+
+$lineSearch: #e1eaf9;
+$lineGray: #e7e7eb;
+
+$white: #fff;
+$black: #000;
+$baseBackground: #f7f7fb;
+$background: #f7f7fb;
+$bgChart2: #e6e9ef;
+
+$gray-100: #f5f5f5;
+$gray-200: #eeeeee;
+$gray-300: #e0e0e0;
+$gray-400: #bdbdbd;
+$gray-500: #9e9e9e;
+$gray-600: #757575;
+$gray-700: #616161;
+$gray-800: #424242;
+$gray-900: #212121;
+
+$fontSize: 16px;
+$fontFamily: 'Noto Sans KR', sans-serif;
+
+// 반응형 미디어 쿼리
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1440px;
+
+// layout
+$hdH: 70px;
+$botHd: 60px;
+$bdR36: 36px;
+
+// vcard
+$card-box-shadow: none;

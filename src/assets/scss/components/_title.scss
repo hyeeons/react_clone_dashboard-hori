@@ -1,0 +1,43 @@
+// title
+.title-h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    &__name {
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $primaryDark;
+        i {
+            font-size: 1.125rem;
+            margin-right: 10px;
+        }
+        span {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: 400;
+            color: $primaryLight;
+        }
+    }
+    &__more {
+        margin-right: -7px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            &:hover {
+                background: $primaryLight2;
+            }
+        }
+        i {
+            font-size: 1rem;
+            color: $primaryDark;
+            opacity: 0.5;
+        }
+    }
+}

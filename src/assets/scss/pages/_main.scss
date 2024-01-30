@@ -1,0 +1,42 @@
+.slide-intro {
+    swiper-slide {
+        height: 300px;
+        background: $primary;
+    }
+}
+
+.sec-import-notice {
+    .v-card {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .ani-x {
+        display: flex;
+        overflow-x: hidden;
+        padding: 25px 0;
+        padding: 0 1rem;
+    }
+    .box {
+        margin-right: 20px;
+        animation-name: main-marquee-ani;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        animation-direction: normal;
+        animation-timing-function: linear;
+    }
+    .key {
+        display: inline-block;
+        margin-right: 7px;
+        font-weight: 700;
+        color: $primaryDark;
+    }
+}
+
+@keyframes main-marquee-ani {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

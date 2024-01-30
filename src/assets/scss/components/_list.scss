@@ -1,0 +1,18 @@
+.list-notice {
+    width: 100%;
+    padding: 10px 20px;
+    li {
+        border-bottom: 1px solid $lineSearch;
+    }
+    a {
+        display: block;
+        overflow: hidden;
+        padding: 10px 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .none {
+        padding: 17px 20px;
+        text-align: center;
+    }
+}

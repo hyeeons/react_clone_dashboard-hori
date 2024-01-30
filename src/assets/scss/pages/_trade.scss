@@ -1,0 +1,350 @@
+// trading info
+.trading {
+    > .v-row {
+        align-items: center;
+        padding: 10px 0 20px;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        .btn-prev {
+            position: static;
+            margin-left: -9px;
+            color: $primary;
+            transform: none;
+        }
+        &__img {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: $primaryLight2;
+        }
+        &__name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $primaryDark;
+        }
+        &__num {
+            margin-left: auto;
+            text-align: right;
+        }
+        &__shortcode,
+        &__symbol {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: $primaryLight;
+            opacity: 0.5;
+        }
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__now {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $primaryDark;
+            letter-spacing: -0.07rem;
+            em {
+                font-size: 1rem;
+                font-weight: 400;
+                color: $primaryLight;
+                opacity: 0.5;
+            }
+        }
+        &__standard {
+            display: block;
+            margin-bottom: -8px;
+            text-align: right;
+            color: $primaryLight;
+        }
+    }
+    &__detail {
+        background: $white;
+    }
+}
+
+.order {
+    &__chart {
+        .v-list {
+            border: none;
+            padding: 0;
+        }
+
+        .sellPrice[data-v-0e161908],
+        .buyPrice[data-v-0e161908] {
+            margin-bottom: 1px;
+            border: none;
+        }
+        .sellPrice,
+        .buyPrice {
+            margin-bottom: 1px;
+            padding-inline: 0 !important;
+        }
+        .buyPrice {
+            background-color: $upBg;
+        }
+        .sellPrice {
+            background-color: $downBg;
+        }
+        .v-list-item--density-default.v-list-item--one-line {
+            min-height: 28px;
+            // max-height: 28px;
+        }
+
+        .lineBuyLeft {
+            position: absolute;
+            right: 0;
+            top: 1px;
+            bottom: 1px;
+            /*width: 50%;*/
+            background-color: $upBar;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .lineSellLeft {
+            position: absolute;
+            /*right: 50%;*/
+            right: 0;
+            top: 2px;
+            bottom: 2px;
+            /*width: 50%;*/
+            background-color: $downBar;
+            border-radius: 5px 0 0 5px;
+        }
+    }
+    &__order {
+        padding: 10px 3% !important;
+    }
+}
+
+// 주문 상세
+.order-tab-detail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .v-label {
+        color: $primaryLight3;
+    }
+    .v-text-field input {
+        color: $primaryDark;
+        font-weight: 700;
+    }
+    .v-text-field__prefix,
+    .v-text-field__suffix {
+        color: $primaryDark;
+    }
+
+    .v-field--variant-solo-inverted:focus .v-field__overlay {
+        background: $primaryLight2;
+    }
+    .v-btn.v-btn--density-default {
+        position: fixed;
+        bottom: $botHd;
+        left: 33.3333333333%;
+        right: 0;
+        height: 50px;
+        width: auto !important;
+        min-width: 0;
+        max-width: none;
+        border-radius: 0;
+        .v-btn__content {
+            font-weight: 700;
+        }
+    }
+}
+
+.block-line {
+    display: flex;
+    gap: 5px;
+    padding: 2px 0;
+    justify-content: space-between;
+    text-align: right;
+    .block-line__right,
+    .block-line__left {
+        position: relative;
+        width: 50%;
+    }
+    .block-line__right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5px;
+    }
+    .price {
+        font-size: 14px;
+        font-weight: 700;
+        color: $up;
+    }
+    .change {
+        font-size: 11px;
+        font-weight: 400;
+        color: $up;
+    }
+    .amount {
+        position: relative;
+        font-size: 13px;
+    }
+    .block-text-left {
+        color: $primaryLight;
+        font-size: 11px;
+    }
+    .block-text-right {
+        color: $txtDefult;
+        font-size: 11px;
+    }
+}
+
+.trading-chart {
+    border: none !important;
+}
+
+.trading-bidding {
+    .hoga_header {
+        padding: 5px;
+    }
+    .hoga_buy_table {
+        tr {
+            background-color: white;
+            height: 28px;
+        }
+
+        td {
+            // padding-top: 2px;
+            // padding-bottom: 2px;
+            // padding-right: 5px;
+            background-color: $upBg;
+            height: 28px;
+        }
+
+        td {
+            &:nth-child(2) {
+                text-align: right;
+            }
+        }
+
+        tr:nth-child(1) td:nth-child(1) {
+            background: $white;
+            border: none;
+        }
+    }
+
+    .hoga_sell_table {
+        td {
+            // padding-top: 2px;
+            // padding-bottom: 2px;
+            // padding-right: 5px;
+            background-color: $downBg;
+            height: 28px;
+            &:nth-child(3) {
+                background: white;
+                border: none;
+            }
+
+            &:nth-child(1) {
+                text-align: right;
+            }
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+        }
+
+        tr {
+            background-color: white;
+            height: 28px;
+        }
+
+        th {
+            background-color: white;
+            font-weight: 500;
+        }
+    }
+
+    .hoga_sell_table,
+    .hoga_buy_table {
+        border-collapse: collapse;
+        tr:hover {
+            .hoga_td {
+                background-color: #dadada;
+                cursor: pointer;
+            }
+        }
+        td {
+            position: relative;
+            width: 33.333%;
+            padding: 0 5px;
+            border-bottom: 1px solid $white;
+            border-right: 1px solid $white;
+        }
+        .hoga_info_td {
+            padding: 0;
+            .hoga_info {
+                padding: 7px;
+            }
+        }
+        .hoga_td {
+            font-size: 13px;
+            font-weight: 600;
+            color: $up;
+        }
+    }
+
+    .highPriceFont {
+        color: $up;
+    }
+
+    .lowPriceFont {
+        color: $down;
+    }
+
+    .priceFont {
+        color: $flat;
+    }
+
+    .lineDiv {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        max-width: 35px;
+        .bar {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 26px;
+            transform: translateY(-50%);
+            width: auto;
+        }
+        .lineBuyRight {
+            background-color: $upBar;
+        }
+        .lineSellLeft {
+            background-color: $downBar;
+        }
+        .lineRv {
+            position: relative;
+            transform: translateY(0%);
+            font-size: 12px;
+        }
+    }
+
+    .overlayHoga {
+        position: fixed;
+        height: 30px;
+        opacity: 100;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    hr {
+        margin: 3px 0;
+    }
+
+    .v-list {
+        padding: 0;
+    }
+}

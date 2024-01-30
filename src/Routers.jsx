@@ -1,6 +1,6 @@
+// import styled from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import styled from "styled-components";
 import Home from "./views";
 import Marketplace from "./views/Marketplace";
 import DataTables from "./views/DataTables";
@@ -8,17 +8,41 @@ import Profile from "./views/Profile";
 import SignIn from "./views/SignIn";
 import RtlAdmin from "./views/RtlAdmin";
 
+const RouteArr = [
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/marketplace",
+    element: <Marketplace />,
+  },
+  {
+    path: "/datatables",
+    element: <DataTables />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/rtladmin",
+    element: <RtlAdmin />,
+  },
+];
+
 const Routers = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/marketplace" element={<Marketplace />} />
-          <Route path="/datatables" element={<DataTables />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/rtladmin" element={<RtlAdmin />} />
+          {RouteArr.map((item, index) => (
+            <Route key={index} path={item.path} element={item.element} />
+          ))}
         </Routes>
       </BrowserRouter>
     </>

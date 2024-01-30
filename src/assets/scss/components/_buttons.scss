@@ -1,0 +1,27 @@
+.btn {
+    &--g {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.04rem;
+        border-radius: 16px;
+        box-shadow: none;
+    }
+    &--primary {
+        color: $white;
+        background: $primary;
+    }
+}
+
+.v-btn {
+    &.v-btn.v-btn--density-default {
+        height: 48px;
+    }
+}
+
+.btn-setting {
+    min-width: 0;
+    width: 40px;
+    padding: 0;
+    margin-left: -3px;
+    color: $primary;
+}

@@ -1,32 +1,37 @@
+import { Box, Center, Container, Heading } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
-    <header>
-      <h1>
-        <a href="/">Dashboard</a>
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Main Dashboard</a>
-          </li>
-          <li>
-            <a href="/marketplace">NFT Marketplace</a>
-          </li>
-          <li>
-            <a href="/datatables">Data Tables</a>
-          </li>
-          <li>
-            <a href="/profile">Profile</a>
-          </li>
-          <li>
-            <a href="/signin">Sigh In</a>
-          </li>
-          <li>
-            <a href="/rtladmin">RTL Admin</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <Box as="header" borderBottom={"5px solid lightcoral"}>
+      <Container display={["block", null, "flex"]} justifyContent={"Center"}>
+        <Heading fontSize={"24px"} style={{ width: "1000px", height: "50px" }}>
+          <Link to="/">Dashboard</Link>
+        </Heading>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Main Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/marketplace">NFT Marketplace</Link>
+            </li>
+            <li>
+              <Link to="/datatables"> Data Tables</Link>
+            </li>
+            <li>
+              <Link to="/profile"> Profile</Link>
+            </li>
+            <li>
+              <Link to="/signin"> Sigh In</Link>
+            </li>
+            <li>
+              <Link to="/rtladmin"> RTL Admin</Link>
+            </li>
+          </ul>
+        </nav>
+      </Container>
+    </Box>
   );
 };
 

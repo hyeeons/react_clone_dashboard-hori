@@ -1,0 +1,45 @@
+// icon
+.up {
+    color: $up;
+    i {
+        margin-right: 7px;
+        margin-top: -1px;
+        vertical-align: middle;
+    }
+}
+.down {
+    color: $down;
+    i {
+        margin-right: 7px;
+    }
+}
+.flat {
+    color: $flat;
+}
+
+i {
+    &.fa-up {
+    }
+    &.up,
+    &.down {
+        font-size: 28px;
+    }
+    &.flat {
+        position: relative;
+        color: $white;
+        &::before {
+            display: none;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            transform: translate(0, -50%);
+            width: 9px;
+            height: 3px;
+            border-radius: 3px;
+            background: $flat;
+        }
+    }
+}

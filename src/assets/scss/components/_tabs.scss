@@ -1,0 +1,72 @@
+.tabs-top {
+    border-bottom: 1px solid $lineSearch;
+    .v-tabs {
+        overflow: hidden;
+    }
+    &.bg1 {
+        background: $bgChart2;
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     bottom: 0;
+        //     right: 0;
+        //     border-radius: 32px 32px 0 0;
+        // }
+    }
+
+    .v-btn {
+        &__content {
+            color: $primaryLight3;
+        }
+        &.v-tab--selected {
+            .v-btn__content {
+                color: $primaryDark;
+                .v-tab__slider {
+                    background: $primary;
+                }
+            }
+        }
+    }
+}
+
+.tabs-btn {
+    margin-bottom: 15px;
+    background: $baseBackground;
+    &.v-btn-group {
+        width: 100%;
+        height: 36px;
+        border-radius: 16px !important;
+    }
+    .v-btn {
+        .v-btn__underlay,
+        .v-btn__overlay {
+            display: none;
+        }
+        .v-btn__content {
+            color: $primaryLight;
+        }
+        &--active {
+            &[value='buy'] {
+                background: $upBar;
+                .v-btn__content {
+                    color: $up;
+                }
+            }
+            &[value='sell'] {
+                background: $downBar;
+                .v-btn__content {
+                    color: $down;
+                }
+            }
+            &[value='history'] {
+                background: $flatBar;
+            }
+        }
+    }
+}
+
+.v-tab.v-tab {
+    min-width: 0;
+}
