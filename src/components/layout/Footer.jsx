@@ -1,13 +1,10 @@
-import { Box } from "@chakra-ui/react";
+import ContainerSt from "./Container";
 
 const Footer = () => {
   return (
-    <Box
-      as="footer"
-      style={{ width: "1000px", height: "100px", backgroundColor: "lightgray" }}
-    >
+    <ContainerSt as="footer" height={"100px"} background={"lightgray"}>
       Footer입니다.
-    </Box>
+    </ContainerSt>
   );
 };
 

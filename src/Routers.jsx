@@ -12,10 +12,12 @@ const RouteArr = [
   {
     path: "/",
     element: <Home />,
+    background: "lightblue",
   },
   {
     path: "/marketplace",
     element: <Marketplace />,
+    background: "lightblue",
   },
   {
     path: "/datatables",
