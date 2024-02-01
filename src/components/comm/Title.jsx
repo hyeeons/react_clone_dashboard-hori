@@ -2,7 +2,7 @@ import { Heading } from "@chakra-ui/react";
 
 const Title = (props) => {
   return (
-    <Heading as="h3" fontSize={20} color={"black"} my={5}>
+    <Heading as="h3" fontSize={20} color={props.color} my={5}>
       {props.children}
     </Heading>
   );

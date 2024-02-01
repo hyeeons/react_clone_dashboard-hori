@@ -1,4 +1,4 @@
-import { Box, Container, propNames } from "@chakra-ui/react";
+import { Box, Container, GlobalStyle, propNames } from "@chakra-ui/react";
 
 const ContainerSt = (props) => {
   return (

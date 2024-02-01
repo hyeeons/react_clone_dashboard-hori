@@ -6,7 +6,7 @@ import { Section } from "../components/layout/Container";
 const Home = () => {
   return (
     <Layout title="LOGO 이름">
-      <Section background={"lightyellow"}>
+      <Section background={"green.100"}>
         <Title>회사소개</Title>
 
         <SubTitle>대표님인사</SubTitle>

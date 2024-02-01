@@ -1,12 +1,14 @@
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Routers from "./Routers";
 import "./assets/scss/style.scss";
-import theme from "./theme";
-
+import theme from "./theme/theme";
+import { ThemeProvider } from "styled-components";
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Routers />
+      <ThemeProvider theme={theme}>
+        <Routers />
+      </ThemeProvider>
     </ChakraProvider>
   );
 }
