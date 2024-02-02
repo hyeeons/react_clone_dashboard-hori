@@ -1,5 +1,6 @@
 import { mode } from "@chakra-ui/theme-tools";
 import { lighten } from "polished";
+
 export const globalStyles = {
   colors: {
     brand: {
@@ -91,6 +92,7 @@ export const globalStyles = {
         fontFamily: "'Noto Sans KR', sans-serif;",
         letterSpacing: "-0.5px",
         color: "#222",
+        minwidth: "320px",
       },
       input: {
         color: "gray.700",
@@ -98,6 +100,12 @@ export const globalStyles = {
       html: {
         fontFamily: "DM Sans",
       },
+      "ul > li": {
+        listStyle: "none",
+      },
+      //   ".chakra-container": {
+      //     maxwidth: "1280 !important",
+      //   },
     }),
   },
 };

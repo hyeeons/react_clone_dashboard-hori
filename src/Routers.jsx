@@ -2,11 +2,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./views";
-import Marketplace from "./views/Marketplace";
-import DataTables from "./views/DataTables";
-import Profile from "./views/Profile";
-import SignIn from "./views/SignIn";
-import RtlAdmin from "./views/RtlAdmin";
+import Marketplace from "./views/marketplace/Marketplace";
+import DataTables from "./views/datatables/DataTables";
+import Profile from "./views/Profile/Profile";
+import SignIn from "./views/signin/SignIn";
+import RtlAdmin from "./views/admin/RtlAdmin";
 
 const RouteArr = [
   {

@@ -8,6 +8,9 @@ const ContainerSt = (props) => {
       px={[20, null, 0]}
       height={props.height}
       background={props.background}
+      display={props.display}
+      justifyContent={props.justifyContent}
+      alignItems={props.alignItems}
     >
       {props.children}
     </Container>

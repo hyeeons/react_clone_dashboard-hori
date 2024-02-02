@@ -18,14 +18,17 @@ export const buttonStyles = {
       },
 
       variants: {
-        cancel: () => ({
-          bg: ["red", "green", "brand.300", "orange.400"],
-          color: ["white", "white", "lightblue", "lightyellow"],
+        tnb: () => ({
+          fontSize: "12px",
+          fontWeight: "400",
+          color: ["white"],
+          padding: "0 5px 0 0",
+          height: "30px",
         }),
-        outline: () => ({
-          borderRadius: "16px",
-          bg: ["brand.500", "brand.200", "brand.500"],
-          color: ["white", "white", "green", "brand.500", "white"],
+
+        gnbicon: () => ({
+          fontSize: "24px",
+          color: ["black"],
         }),
         brand: (props) => ({
           bg: mode("brand.500", "brand.400")(props),
