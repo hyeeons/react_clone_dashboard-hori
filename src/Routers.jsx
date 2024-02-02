@@ -1,7 +1,7 @@
 // import styled from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./views";
+import Home from "./views/home";
 import Marketplace from "./views/marketplace/Marketplace";
 import DataTables from "./views/datatables/DataTables";
 import Profile from "./views/Profile/Profile";

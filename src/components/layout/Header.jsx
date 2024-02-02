@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import ContainerSt from "./Container";
 import { lighten } from "polished";
-import Gnb from "../comm/Gnb";
+import Gnb from "./Gnb";
 
 const Header = () => {
   return (

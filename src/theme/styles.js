@@ -103,9 +103,9 @@ export const globalStyles = {
       "ul > li": {
         listStyle: "none",
       },
-      //   ".chakra-container": {
-      //     maxwidth: "1280 !important",
-      //   },
+      ".chakra-container": {
+        maxwidth: "1280 !important",
+      },
     }),
   },
 };

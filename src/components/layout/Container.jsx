@@ -18,8 +18,11 @@ const ContainerSt = (props) => {
 };
 
 export const Section = (props) => {
+  // 삼항 연산자
+  // 조건? 참일 때 : 거짓일 때
+  const backgroundColor = props.isLightBackground ? "white" : "gray.100";
   return (
-    <Box background={props.background} padding={5}>
+    <Box background={props.background} padding={5} py={"100px"}>
       {" "}
       {props.children}
     </Box>

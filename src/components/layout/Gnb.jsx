@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { lighten } from "polished";
-import ContainerSt from "../layout/Container";
+import ContainerSt from "./Container";
 import { FaSearch } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
 import { FaHamburger } from "react-icons/fa";
