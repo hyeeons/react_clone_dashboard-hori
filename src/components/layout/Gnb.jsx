@@ -29,7 +29,12 @@ const Gnb = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Logo width="300px" fontSize={24}>
+        <Logo
+          width="150px"
+          fontSize={24}
+          textAlign={"center"}
+          lineHeight={"35px"}
+        >
           <Link to="/">Dashboard</Link>
         </Logo>
         <UnorderedList display={{ sm: "none", lg: "flex" }} gap={"40px"}>

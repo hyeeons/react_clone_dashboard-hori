@@ -6,7 +6,7 @@ import MainSlide from "./components/MainSlide";
 
 const Home = () => {
   return (
-    <Layout title="home" shoTitle={false}>
+    <Layout title="home" showTitle={false}>
       <MainSlide />
       <Section isLightBackground={true} background={"green.100"}>
         <Container>

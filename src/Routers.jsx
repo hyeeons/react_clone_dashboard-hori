@@ -1,12 +1,12 @@
 // import styled from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./views/home";
+import Home from "./views/home/Home";
 import Marketplace from "./views/marketplace/Marketplace";
 import DataTables from "./views/datatables/DataTables";
 import Profile from "./views/Profile/Profile";
 import SignIn from "./views/signin/SignIn";
-import RtlAdmin from "./views/admin/RtlAdmin";
+import RtlAdmin from "./views/rtladmin/RtlAdmin";
 
 const RouteArr = [
   {
@@ -17,7 +17,7 @@ const RouteArr = [
   {
     path: "/marketplace",
     element: <Marketplace />,
-    background: "lightblue",
+    background: "lightpink",
   },
   {
     path: "/datatables",

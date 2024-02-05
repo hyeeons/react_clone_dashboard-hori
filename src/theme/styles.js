@@ -98,13 +98,13 @@ export const globalStyles = {
         color: "gray.700",
       },
       html: {
-        fontFamily: "DM Sans",
+        fontFamily: '"Noto Sans KR", "sans-serif"',
       },
       "ul > li": {
         listStyle: "none",
       },
       ".chakra-container": {
-        maxwidth: "1280 !important",
+        maxWidth: "calc(1280px + var(--chakra-space-4) * 2) !important",
       },
     }),
   },
