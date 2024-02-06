@@ -6,7 +6,7 @@ import MainSlide from "./components/MainSlide";
 
 const Home = () => {
   return (
-    <Layout title="home" showTitle={false}>
+    <>
       <MainSlide />
       <Section isLightBackground={true} background={"green.100"}>
         <Container>
@@ -55,7 +55,7 @@ const Home = () => {
           </p>
         </Container>
       </Section>
-    </Layout>
+    </>
   );
 };
 

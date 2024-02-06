@@ -15,37 +15,60 @@ import ContainerSt from "./Container";
 import { lighten } from "polished";
 import Gnb from "./Gnb";
 import gsap from "gsap";
+import { useEffect, useState } from "react";
 
+// if : 100px 이상 스크롤 되면 헤더에 배경색을 입힌다.
+// gsap.to(요소, {옵션})
+// else : 100px 이하로 스크롤 되면 배경색을 없앤다.
 const Header = () => {
-  // if : 100px 이상 스크롤 되면 헤더에 배경색을 입힌다.
-  // gsap.to(요소, {옵션})
-  // else : 100px 이하로 스크롤 되면 배경색을 없앤다.
+  const [isScroll, setIsScroll] = useState(false);
 
-  const HandleScroll = () => {
-    const scrollY = window.scrollY; // 현재 스크롤 위치
-    const hd = document.getElementById("header"); // 헤더
-    const navBelt = document.querySelector(".nav-belt__wrapper");
-    const navBar = document.querySelector(".nav-bar__wrapper");
-    const hdHeight = hd.offsetHeight; // 헤더 높이
-    const swiperHeight = document.querySelector(".top-cont")?.offsetHeight || 0;
-    console.log(scrollY);
-    console.log(swiperHeight - hdHeight);
+  useEffect(() => {
+    const HandleScroll = () => {
+      const scrollY = window.scrollY; // 현재 스크롤 위치
+      const hd = document.getElementById("header"); // 헤더
+      const navBelt = document.querySelector(".nav-belt__wrapper");
+      const navBar = document.querySelector(".nav-bar__wrapper");
+      const hdHeight = hd.offsetHeight; // 헤더 높이
+      const swiperHeight =
+        document.querySelector(".top-cont")?.offsetHeight || 0;
 
-    if (scrollY > swiperHeight - hdHeight) {
-      gsap.to(hd, { backgroundColor: "#fff", duration: 0.5 });
-    } else {
-      gsap.to(hd, { backgroundColor: "rgba(0,0,0,.1)", duration: 0.5 });
-    }
-  };
-  // 스크롤 이벤트 등록
-  window.addEventListener("scroll", HandleScroll);
+      console.log(scrollY);
+      console.log(swiperHeight - hdHeight);
+
+      if (scrollY > swiperHeight - hdHeight) {
+        gsap.to(hd, { backgroundColor: "#fff", duration: 0.5 });
+      } else {
+        gsap.to(hd, { backgroundColor: "rgba(0,0,0,.1)", duration: 0.5 });
+      }
+      // 스크롤 고정
+
+      const navBeltHeight =
+        document.querySelector(".nav-belt__wrapper")?.offsetHeight || 0;
+
+      const scrollPosition =
+        Window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollPosition > navBeltHeight) {
+        document.getElementById("header").style.top = "-32px";
+        navBar.style.position = "fixed";
+        navBar.style.width = "100%";
+      } else {
+        document.getElementById("header").style.top = -scrollPosition + "px";
+        setIsScroll(true);
+      }
+    };
+
+    // 스크롤 이벤트 등록
+    window.addEventListener("scroll", HandleScroll);
+    return () => window.removeEventListener("scroll", HandleScroll);
+  }, []);
 
   return (
     <>
       <Box
         id="header"
         className="header"
-        as="tnbheader"
+        as="TnbHeader"
         position={"fixed"}
         top={0}
         left={0}

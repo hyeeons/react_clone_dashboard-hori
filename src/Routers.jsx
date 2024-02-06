@@ -7,6 +7,7 @@ import DataTables from "./views/datatables/DataTables";
 import Profile from "./views/Profile/Profile";
 import SignIn from "./views/signin/SignIn";
 import RtlAdmin from "./views/rtladmin/RtlAdmin";
+import Layout, { LayoutNone } from "./components/layout/Layout";
 
 const RouteArr = [
   {
@@ -27,14 +28,6 @@ const RouteArr = [
     path: "/profile",
     element: <Profile />,
   },
-  {
-    path: "/signin",
-    element: <SignIn />,
-  },
-  {
-    path: "/rtladmin",
-    element: <RtlAdmin />,
-  },
 ];
 
 const Routers = () => {
@@ -42,9 +35,21 @@ const Routers = () => {
     <>
       <BrowserRouter>
         <Routes>
-          {RouteArr.map((item, index) => (
-            <Route key={index} path={item.path} element={item.element} />
-          ))}
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/datatables" element={<DataTables />} />
+            <Route path="profile" element={<Profile />} />
+
+            {/* {RouteArr.map((item, index) => (
+              <Route key={index} path={item.path} element={item.element} />
+            ))} */}
+          </Route>
+
+          <Route element={<LayoutNone />}>
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/rtladmin" element={<RtlAdmin />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
