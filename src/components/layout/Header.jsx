@@ -24,44 +24,58 @@ const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
 
   useEffect(() => {
-    const HandleScroll = () => {
-      const scrollY = window.scrollY; // 현재 스크롤 위치
-      const hd = document.getElementById("header"); // 헤더
-      const navBelt = document.querySelector(".nav-belt__wrapper");
-      const navBar = document.querySelector(".nav-bar__wrapper");
-      const hdHeight = hd.offsetHeight; // 헤더 높이
-      const swiperHeight =
-        document.querySelector(".top-cont")?.offsetHeight || 0;
-
-      console.log(scrollY);
-      console.log(swiperHeight - hdHeight);
-
-      if (scrollY > swiperHeight - hdHeight) {
-        gsap.to(hd, { backgroundColor: "#fff", duration: 0.5 });
-      } else {
-        gsap.to(hd, { backgroundColor: "rgba(0,0,0,.1)", duration: 0.5 });
-      }
-      // 스크롤 고정
-
+    const handleScroll = () => {
       const navBeltHeight =
         document.querySelector(".nav-belt__wrapper")?.offsetHeight || 0;
-
       const scrollPosition =
-        Window.pageYOffset || document.documentElement.scrollTop;
+        window.pageYOffset || document.documentElement.scrollTop;
+      const header = document.getElementById("header");
+      const navBarWrapper = document.querySelector(".nav-bar__wrapper");
+
       if (scrollPosition > navBeltHeight) {
-        document.getElementById("header").style.top = "-32px";
-        navBar.style.position = "fixed";
-        navBar.style.width = "100%";
+        header.style.top = "-32px";
+        navBarWrapper.style.position = "fixed";
+        navBarWrapper.style.width = "100%";
       } else {
-        document.getElementById("header").style.top = -scrollPosition + "px";
+        header.style.top = -scrollPosition + "px";
         setIsScroll(true);
       }
     };
 
-    // 스크롤 이벤트 등록
-    window.addEventListener("scroll", HandleScroll);
-    return () => window.removeEventListener("scroll", HandleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const navBelt = document.querySelector(".nav-belt__wrapper");
+    const navBar = document.querySelector(".nav-bar__wrapper");
+    const navBarHeight = navBar.offsetHeight;
+    const swiperHeight = document.querySelector(".top-cont")?.offsetHeight || 0;
+
+    if (scrollY > swiperHeight - navBarHeight) {
+      gsap.to(navBar, {
+        backgroundColor: "#fff",
+        duration: 0.5,
+        boxShadow: "0 1px 4px 0 rgba(0,0,0,.07)",
+      });
+      gsap.to(navBelt, { backgroundColor: "#f6f7f8", duration: 0.5 });
+
+      gsap.to(navBelt.querySelectorAll("button"), {
+        color: "#000",
+        duration: 0.5,
+      });
+      gsap.to(navBar.querySelectorAll("button, a"), {
+        color: "#000",
+        duration: 0.5,
+      });
+    } else {
+      gsap.to(navBar, { backgroundColor: "", duration: 0.5 });
+      gsap.to(navBelt, { backgroundColor: "", duration: 0.5 });
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
 
   return (
     <>
@@ -74,8 +88,8 @@ const Header = () => {
         left={0}
         right={0}
         zIndex={1000}
-        bg={"rgba(0,0,0,.1)"}
-        backdropFilter={"saturate(180%)} blur=(15px)"}
+        bg={isScroll ? "rgba(0,0,0,.1)" : "transparent"}
+        backdropFilter={isScroll ? "saturate(180%)} blur=(15px)" : "none"}
       >
         {/* tnb tab */}
         <Box
