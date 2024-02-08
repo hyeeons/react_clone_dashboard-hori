@@ -3,6 +3,17 @@ import { lighten } from "polished";
 
 export const globalStyles = {
   colors: {
+    primay: "#422AFB",
+    pirmaryLight: lighten(0.1, "#422AFB"),
+    secondary: "#83D9FB",
+    secondaryLight: lighten(0.1, "#83D9FB"),
+    tertiary: "#22C55F",
+    tertiaryLight: lighten(0.1, "#22C55F"),
+    bgDefault: "#F5F7FF",
+    white: "#FFF",
+    black: "#000",
+    txtdefault: "#2D3748",
+
     brand: {
       100: "#E9E3FF",
       200: "#422AFB",
@@ -93,7 +104,11 @@ export const globalStyles = {
         letterSpacing: "-0.5px",
         color: "#222",
         minwidth: "320px",
+        // bg: "url('/pc.png') no-repeat 0 0 / 1790px auto",
       },
+      //   "#root": {
+      //     opacity: 0.7,
+      //   },
       input: {
         color: "gray.700",
       },
@@ -103,9 +118,9 @@ export const globalStyles = {
       "ul > li": {
         listStyle: "none",
       },
-      ".chakra-container": {
-        maxWidth: "calc(1280px + var(--chakra-space-4) * 2) !important",
-      },
+      //   ".chakra-container": {
+      //     maxWidth: "calc(1280px + var(--chakra-space-4) * 2) !important",
+      //   },
     }),
   },
 };
