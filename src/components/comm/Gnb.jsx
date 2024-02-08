@@ -9,7 +9,6 @@ import { RiAdminFill } from "react-icons/ri";
 import { useState } from "react";
 
 const Gnb = () => {
-  const location = useLocation();
   const [isSelected, setIsSelected] = useState(0);
   const MenuArr = [
     { path: "/", icon: <FaHome />, value: "Main Dashboard" },
@@ -30,7 +29,7 @@ const Gnb = () => {
       display={"flex"}
       flexDirection={"column"}
       gap={5}
-      mt={8}
+      mt={9}
       ml={5}
     >
       {MenuArr.map((item, index) => (

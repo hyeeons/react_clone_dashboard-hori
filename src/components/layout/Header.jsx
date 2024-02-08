@@ -5,18 +5,17 @@ import Gnb from "../comm/Gnb";
 const Header = () => {
   return (
     <>
-      <Box>
+      <Box padding={"0 30px"}>
         <Heading
           as={"h1"}
+          w={239}
           fontSize={25}
           fontWeight={400}
-          pt={14}
-          pb={9}
-          h={100}
-          padding={10}
+          h={120}
+          padding={"55px 0"}
           textAlign={"center"}
           borderBottom={"1px solid"}
-          borderColor={"lineDefault"}
+          borderColor={"secondaryGray.500"}
         >
           <Link to="/">
             <strong>HORIZON </strong>FREE

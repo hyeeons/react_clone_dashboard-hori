@@ -1,14 +1,13 @@
 import { Box } from "@chakra-ui/react";
-import Layout from "../../components/layout/Layout";
 
-const Profile = () => {
+const MainDashboard = () => {
   return (
     <>
       <Box w={"100%"} bg={"bgmain"}>
-        프로파일
+        안녕하세요. 메인화면입니다.
       </Box>
     </>
   );
 };
 
-export default Profile;
+export default MainDashboard;

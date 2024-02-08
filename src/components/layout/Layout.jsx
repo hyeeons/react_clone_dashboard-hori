@@ -1,25 +1,14 @@
 import { Box } from "@chakra-ui/react";
 import Header from "./Header";
+import { Outlet } from "react-router-dom";
 
 const Layout = (props) => {
   return (
     <>
-      <Box as="wrap" display={"flex"} justifyContent={"space-between"}>
-        <Box
-          as="header"
-          //   bg={"lightblue"}
-          w={299}
-          h={"100vh"}
-          padding={"25px 16px 0"}
-        >
-          <Header />
-        </Box>
-        <Box
-          as="main"
-          bg={"bgmain"}
-          w={`calc(100% - 299px)`}
-          padding={30}
-        ></Box>
+      <Box display={"flex"} minH={"100vh"} bg={"bgDefault"}>
+        <Header />
+        <Box as="main" id="main" flexGrow={1}></Box>
+        <Outlet />
       </Box>
     </>
   );
