@@ -13,6 +13,7 @@ export const globalStyles = {
     white: "#FFF",
     black: "#000",
     txtdefault: "#2D3748",
+    bgmain: "#e2e8f0",
 
     brand: {
       100: "#E9E3FF",

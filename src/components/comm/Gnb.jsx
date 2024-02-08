@@ -8,7 +8,7 @@ import { FaUnlockAlt } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
 import { useState } from "react";
 
-const MenuList = () => {
+const Gnb = () => {
   const [isSelected, setIsSelected] = useState(0);
   const MenuArr = [
     { link: "/", icon: <FaHome />, value: "Main Dashboard" },
@@ -68,4 +68,4 @@ const MenuList = () => {
   );
 };
 
-export default MenuList;
+export default Gnb;

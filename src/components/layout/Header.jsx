@@ -1,15 +1,28 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import MenuList from "../comm/MenuList";
+import Gnb from "../comm/Gnb";
 
 const Header = () => {
   return (
     <>
       <Box>
-        <Box h={100} padding={10} textAlign={"center"}>
-          <Link to="/">HORIZON FREE</Link>
-        </Box>
-        <MenuList />
+        <Heading
+          as={"h1"}
+          fontSize={25}
+          fontWeight={400}
+          pt={14}
+          pb={9}
+          h={100}
+          padding={10}
+          textAlign={"center"}
+          borderBottom={"1px solid"}
+          borderColor={"lineDefault"}
+        >
+          <Link to="/">
+            <strong>HORIZON </strong>FREE
+          </Link>
+        </Heading>
+        <Gnb />
       </Box>
     </>
   );

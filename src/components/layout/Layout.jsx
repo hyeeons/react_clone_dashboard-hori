@@ -16,7 +16,7 @@ const Layout = (props) => {
         </Box>
         <Box
           as="main"
-          //   bg={"lightpink"}
+          bg={"bgmain"}
           w={`calc(100% - 299px)`}
           padding={30}
         ></Box>
