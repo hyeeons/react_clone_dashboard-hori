@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Image } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import Routers from "./Routers";
 import "./assets/scss/style.scss";
 import theme from "./theme/theme";

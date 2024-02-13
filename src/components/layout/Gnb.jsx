@@ -1,5 +1,5 @@
-import { Box, Link, Flex, Icon, LinkBox, Text } from "@chakra-ui/react";
-import { Link as ReactRouterLink, useLocation } from "react-router-dom";
+import { Box, Link, Text } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
 import { BsFillFileBarGraphFill } from "react-icons/bs";

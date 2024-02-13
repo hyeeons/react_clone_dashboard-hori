@@ -1,11 +1,22 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import Gnb from "../comm/Gnb";
+import Gnb from "./Gnb";
 
 const Header = () => {
   return (
     <>
-      <Box padding={"0 30px"}>
+      <Box
+        as={"header"}
+        id={"header"}
+        padding={"0 30px"}
+        position={"fixed"}
+        top={0}
+        bottom={0}
+        zIndex={1000}
+        left={{ sm: "-100%", xl: 0 }}
+        bg={"white"}
+        w={292}
+      >
         <Heading
           as={"h1"}
           w={239}

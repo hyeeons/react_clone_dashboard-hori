@@ -1,11 +1,10 @@
 import { Box } from "@chakra-ui/react";
+import History from "../../components/layout/History";
 
-const MainDashboard = () => {
+const MainDashboard = (props) => {
   return (
     <>
-      <Box w={"100%"} bg={"bgmain"}>
-        안녕하세요. 메인화면입니다.
-      </Box>
+      <Box w={"100%"}>{/* <History title={"Main Dashboard"} /> */}</Box>
     </>
   );
 };

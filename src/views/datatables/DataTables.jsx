@@ -1,12 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import Layout from "../../components/layout/Layout";
+import History from "../../components/layout/History";
 
 const DataTables = () => {
   return (
     <>
-      <Box w={"100%"} bg={"bgmain"}>
-        데이터 테이블
-      </Box>
+      <Box w={"100%"}></Box>
     </>
   );
 };

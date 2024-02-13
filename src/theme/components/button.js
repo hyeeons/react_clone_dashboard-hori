@@ -18,6 +18,12 @@ export const buttonStyles = {
       },
 
       variants: {
+        searchicon: () => ({
+          fontSize: "16px",
+          padding: "0",
+          margin: "0",
+          width: "20px",
+        }),
         tnb: () => ({
           fontSize: "12px",
           fontWeight: "400",

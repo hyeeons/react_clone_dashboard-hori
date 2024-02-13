@@ -1,7 +1,6 @@
 // import styled from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./views/home/MainDashboard";
 import Marketplace from "./views/marketplace/Marketplace";
 import DataTables from "./views/datatables/DataTables";
 import Profile from "./views/Profile/Profile";
@@ -10,24 +9,24 @@ import RtlAdmin from "./views/rtladmin/RtlAdmin";
 import Layout, { LayoutNone } from "./components/layout/Layout";
 import MainDashboard from "./views/home/MainDashboard";
 
-const RouteArr = [
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/marketplace",
-    element: <Marketplace />,
-  },
-  {
-    path: "/datatables",
-    element: <DataTables />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
-];
+// const RouteArr = [
+//   {
+//     path: "/",
+//     element: <Home />,
+//   },
+//   {
+//     path: "/marketplace",
+//     element: <Marketplace />,
+//   },
+//   {
+//     path: "/datatables",
+//     element: <DataTables />,
+//   },
+//   {
+//     path: "/profile",
+//     element: <Profile />,
+//   },
+// ];
 
 const Routers = () => {
   return (
