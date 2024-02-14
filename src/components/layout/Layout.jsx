@@ -15,8 +15,9 @@ const Layout = (props) => {
           as="main"
           id="main"
           flexGrow={1}
-          pl={{ sm: 0, xl: 322 }}
-          padding={30}
+          pl={{ base: "12px", xl: 312 }}
+          pr={{ base: "12px", xl: "12px" }}
+          pt={{ base: 200, md: 140 }}
           transition={"all 0.3s"}
         >
           <Stack
