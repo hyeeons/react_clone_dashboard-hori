@@ -122,6 +122,17 @@ export const globalStyles = {
       //   ".chakra-container": {
       //     maxWidth: "calc(1280px + var(--chakra-space-4) * 2) !important",
       //   },
+      ".blind": {
+        position: "absolute",
+        width: 0,
+        height: 0,
+        margin: -1,
+        padding: 0,
+        overflow: "hidden",
+        clip: "rect(0, 0, 0, 0)",
+        border: 0,
+        lineHeight: 0,
+      },
     }),
   },
 };
