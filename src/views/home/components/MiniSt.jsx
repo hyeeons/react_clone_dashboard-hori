@@ -1,4 +1,16 @@
-import { Box, Card, CardBody, Flex, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Card,
+  CardBody,
+  Flex,
+  Spacer,
+  Stat,
+  StatHelpText,
+  StatLabel,
+  StatNumber,
+  Text,
+} from "@chakra-ui/react";
+
 import { MdBarChart } from "react-icons/md";
 
 const MiniSt = () => {
@@ -19,10 +31,23 @@ const MiniSt = () => {
           >
             <MdBarChart />
           </Box>
-          <Box></Box>
+          <Stat ml={5}>
+            <StatLabel>Earnings</StatLabel>
+            <StatNumber>$350.4</StatNumber>
+          </Stat>
           <Spacer />
-          <Box p="4" bg="green.400">
-            Box 2
+          <Box
+            w={"56px"}
+            h={"56px"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            borderRadius={"50%"}
+            color={"primary"}
+            fontSize={"24px"}
+            bg={"bgDefault"}
+          >
+            <MdBarChart />
           </Box>
         </Flex>
       </CardBody>
