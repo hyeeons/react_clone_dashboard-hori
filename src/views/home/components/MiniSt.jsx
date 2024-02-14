@@ -1,65 +1,32 @@
-import {
-  Box,
-  Flex,
-  Stat,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
-} from "@chakra-ui/react";
-import { MdOutlineBarChart } from "react-icons/md";
-import { FaDollarSign } from "react-icons/fa";
-import { LuCheckCircle } from "react-icons/lu";
+import { Box, Card, CardBody, Flex, Spacer, Text } from "@chakra-ui/react";
+import { MdBarChart } from "react-icons/md";
 
 const MiniSt = () => {
-  const MiniStArr = [
-    { icon: <MdOutlineBarChart />, text: "Earnings", value: "$350.4" },
-    { icon: <FaDollarSign />, text: "Spend this month", value: "$642.39" },
-    { icon: "", text: "Sales", value: "$574.34" },
-    { icon: <MdOutlineBarChart />, text: "Your balance", value: "$1,000" },
-    { icon: <LuCheckCircle />, text: "New Tasks", value: "154" },
-    { icon: <MdOutlineBarChart />, text: "Total Projects", value: "2935" },
-  ];
   return (
-    <>
-      {MiniStArr.map((item, index) => (
-        <Box
-          key={index}
-          h={"98px"}
-          bg={"white"}
-          borderRadius={20}
-          padding={"15px 20px"}
-        >
-          <Stat>
-            <Flex alignItems={"center"} gap={18}>
-              <Box
-                bg={"secondaryGray.300"}
-                w={"56px"}
-                h={"56px"}
-                padding={"8%"}
-                borderRadius={"50%"}
-                fontSize={"30px"}
-                color={"brandTabs.500"}
-              >
-                {item.icon}
-              </Box>
-              <Box>
-                <StatLabel
-                  lineHeight={"15px"}
-                  margin={0}
-                  color={"secondaryGray.600"}
-                  fontSize={"14px"}
-                >
-                  {item.text}
-                </StatLabel>
-                <StatNumber fontSize={"24px"} color={"secondaryGray.900"}>
-                  {item.value}
-                </StatNumber>
-              </Box>
-            </Flex>
-          </Stat>
-        </Box>
-      ))}
-    </>
+    <Card>
+      <CardBody>
+        <Flex>
+          <Box
+            w={"56px"}
+            h={"56px"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            borderRadius={"50%"}
+            color={"primary"}
+            fontSize={"24px"}
+            bg={"bgDefault"}
+          >
+            <MdBarChart />
+          </Box>
+          <Box></Box>
+          <Spacer />
+          <Box p="4" bg="green.400">
+            Box 2
+          </Box>
+        </Flex>
+      </CardBody>
+    </Card>
   );
 };
 

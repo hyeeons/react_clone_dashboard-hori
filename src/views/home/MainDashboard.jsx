@@ -11,7 +11,13 @@ const MainDashboard = (props) => {
         w={"100%"}
       >
         <MiniSt />
+        <MiniSt />
+        <MiniSt />
+        <MiniSt />
+        <MiniSt />
+        <MiniSt />
       </SimpleGrid>
+
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
         <Box bg={"lightblue"} h={98}>
           토마토

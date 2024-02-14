@@ -3,7 +3,7 @@ import { lighten } from "polished";
 
 export const globalStyles = {
   colors: {
-    primay: "#422AFB",
+    primary: "#422AFB",
     pirmaryLight: lighten(0.1, "#422AFB"),
     secondary: "#83D9FB",
     secondaryLight: lighten(0.1, "#83D9FB"),
