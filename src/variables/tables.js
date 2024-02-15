@@ -16,7 +16,7 @@ export const tableDataCheck = [
   {
     checked: true,
     name: "Weekly Update",
-    progress: "37.5%",
+    progress: "37.8%",
     quantity: "2347",
     data: "24 Mar 2021",
   },
