@@ -21,6 +21,8 @@ import { FcFlowChart } from "react-icons/fc";
 
 import MiniSt from "../../components/card/MiniSt";
 import IconBox from "../../components/icons/IconBox";
+import TotalSpent from "./components/TotalSpent";
+import CheckTable from "./components/CheckTable";
 
 const MainDashboard = (props) => {
   return (
@@ -33,6 +35,7 @@ const MainDashboard = (props) => {
         <MiniSt
           name="Earnings"
           value="$350.4"
+          impleGrid
           startContent={
             <IconBox
               w={"56px"}
@@ -94,15 +97,10 @@ const MainDashboard = (props) => {
       </SimpleGrid>
 
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
-        <Box bg={"lightblue"} h={98}>
-          토마토
-        </Box>
-        <Box bg={"lightblue"} h={98}></Box>
+        <TotalSpent />
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={"20px"} w={"100%"}>
-        <Box bg={"lightpink"} h={98}>
-          dd
-        </Box>
+        <CheckTable />
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
           <Box bg={"lightpink"} h={98}>
             dd

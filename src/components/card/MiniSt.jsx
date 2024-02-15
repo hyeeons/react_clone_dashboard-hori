@@ -17,15 +17,13 @@ const MiniSt = (props) => {
   const { name, value, startContent, endContent, growth } = props;
 
   return (
-    <Card h={116} boxShadow={"none"}>
+    <Card h={116}>
       <CardBody py={15} display={"flex"} alignItems={"center"}>
         {startContent}
         <Stat ml={startContent ? 5 : 0}>
           <StatLabel>{name}</StatLabel>
           <StatNumber>{value}</StatNumber>
-          {growth ? (
-            <StatHelpText>{growth} 글씨추가 랄라랄라</StatHelpText>
-          ) : null}
+          {growth ? <StatHelpText>{growth}adsd </StatHelpText> : null}
         </Stat>
         <Spacer />
         {endContent}
