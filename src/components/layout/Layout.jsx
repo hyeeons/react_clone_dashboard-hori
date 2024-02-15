@@ -25,6 +25,7 @@ const Layout = (props) => {
             justifyContent={"space-between"}
             spacing={0}
             pos={"fixed"}
+            zIndex={1100}
             top={"27px"}
             left={{ sm: "12px", xl: "310px" }}
             right={"12px"}

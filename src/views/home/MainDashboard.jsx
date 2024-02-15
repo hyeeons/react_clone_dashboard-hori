@@ -102,12 +102,8 @@ const MainDashboard = (props) => {
       <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={"20px"} w={"100%"}>
         <CheckTable />
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
-          <Box bg={"lightpink"} h={98}>
-            dd
-          </Box>
-          <Box bg={"lightpink"} h={98}>
-            dd
-          </Box>
+          <Card h={96}></Card>
+          <Card h={96}></Card>
         </SimpleGrid>
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={"20px"} w={"100%"}>

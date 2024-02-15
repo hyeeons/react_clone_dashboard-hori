@@ -12,7 +12,16 @@ class TotalChart extends Component {
           id: "basic-bar",
         },
         xaxis: {
-          categories: ["9월", "10월", "11월", "12월", "1월", "2월", "3월"],
+          categories: [
+            "9월",
+            "10월",
+            "11월",
+            "12월",
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+          ],
         },
         stroke: {
           curve: "smooth",

@@ -43,12 +43,24 @@ const TotalSpent = () => {
         </CardBody>
       </Card>
       <Card>
-        <Box minH="260px" minW="75%" mt="auto">
-          <LineChart
-            chartData={lineChartDataTotalSpent}
-            chartOptions={lineChartOptionsTotalSpent}
-          />
-        </Box>
+        <CardBody>
+          <StatGroup pt={"38px"}>
+            <Stat>
+              <StatLabel>Chart</StatLabel>
+              <StatNumber>235,670</StatNumber>
+              <StatHelpText>
+                <StatArrow type="increase" />
+                37.78%
+              </StatHelpText>
+            </Stat>
+            <Box minH="300px" minW="80%" mt="auto">
+              <LineChart
+                chartData={lineChartDataTotalSpent}
+                chartOptions={lineChartOptionsTotalSpent}
+              />
+            </Box>
+          </StatGroup>
+        </CardBody>
       </Card>
     </>
   );
