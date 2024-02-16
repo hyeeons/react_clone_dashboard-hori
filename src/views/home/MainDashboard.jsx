@@ -23,6 +23,9 @@ import MiniSt from "../../components/card/MiniSt";
 import IconBox from "../../components/icons/IconBox";
 import TotalSpent from "./components/TotalSpent";
 import CheckTable from "./components/CheckTable";
+import MyCalendar from "./components/MyCalendar";
+import BarChart from "./components/BarChart";
+import PieCard from "./components/PieCard";
 
 const MainDashboard = (props) => {
   return (
@@ -102,15 +105,15 @@ const MainDashboard = (props) => {
       <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={"20px"} w={"100%"}>
         <CheckTable />
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
-          <Card h={96}></Card>
-          <Card h={96}></Card>
+          <BarChart />
+          <PieCard />
         </SimpleGrid>
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={"20px"} w={"100%"}>
         <Box bg={"lightgreen"} h={98}></Box>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
           <Box bg={"lightgreen"} h={98}></Box>
-          <Box bg={"lightgreen"} h={98}></Box>
+          <MyCalendar />
         </SimpleGrid>
       </SimpleGrid>
     </VStack>
