@@ -27,6 +27,7 @@ import MyCalendar from "./components/MyCalendar";
 import BarChart from "./components/BarChart";
 import PieCard from "./components/PieCard";
 import ComplexTable from "./components/ComplexTable";
+import Task from "./components/Task";
 
 const MainDashboard = (props) => {
   return (
@@ -113,8 +114,7 @@ const MainDashboard = (props) => {
       <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={"20px"} w={"100%"}>
         <ComplexTable />
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
-          <Box bg={"lightgreen"} h={98}></Box>
-          <MyCalendar />
+          <Task /> <MyCalendar />
         </SimpleGrid>
       </SimpleGrid>
     </VStack>
