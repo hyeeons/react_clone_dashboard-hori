@@ -3,7 +3,12 @@ import {
   CardHeader,
   Checkbox,
   Table,
+  TableContainer,
+  Tbody,
   Td,
+  Th,
+  Thead,
+  Tr,
   useTab,
 } from "@chakra-ui/react";
 import React from "react";
@@ -32,40 +37,49 @@ const ComplexTable = () => {
   return (
     <Card>
       <CardHeader>Complex Table</CardHeader>
-      <table {...getTableProps()}>
-        <thead>
-          {headerGroups.map((headerGroups) => (
-            <tr {...headerGroups.getHeaderGroupProps()}>
-              {headerGroups.headers.map((column) => (
-                <th>
-                  {column.render("Header")}
-                  {column.isSorted ? (
-                    column.isSortedDesc ? (
-                      <FaAngleDown />
+      <TableContainer>
+        <Table {...getTableProps()}>
+          <Thead>
+            {headerGroups.map((headerGroups) => (
+              <Tr {...headerGroups.getHeaderGroupProps()}>
+                {headerGroups.headers.map((column) => (
+                  <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                    {column.render("Header")}
+                    {column.isSorted ? (
+                      column.isSortedDesc ? (
+                        <FaAngleDown />
+                      ) : (
+                        <FaAngleUp />
+                      )
                     ) : (
-                      <FaAngleUp />
-                    )
-                  ) : (
-                    ""
-                  )}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {rows.map((row) => {
-            prepareRow(row);
-            return (
-              <tr>
-                {row.cells.map((cell) => {
-                  return <td>{cell.render("Cell")}</td>;
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                      ""
+                    )}
+                  </Th>
+                ))}
+              </Tr>
+            ))}
+          </Thead>
+          <Tbody {...getTableProps()}>
+            {rows.map((row) => {
+              prepareRow(row);
+              return (
+                <Tr {...row.getRowProps()}>
+                  {row.cells.map((cell) => {
+                    return (
+                      <Td
+                        {...cell.getCellProps()}
+                        isNumeric={cell.column.isNumeric}
+                      >
+                        {cell.render("Cell")}
+                      </Td>
+                    );
+                  })}
+                </Tr>
+              );
+            })}
+          </Tbody>
+        </Table>
+      </TableContainer>
     </Card>
   );
 };
