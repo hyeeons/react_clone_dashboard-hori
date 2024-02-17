@@ -1,6 +1,7 @@
 import React from "react";
 import { useTable, useSortBy } from "react-table";
 import {
+  Box,
   Card,
   CardHeader,
   Checkbox,
@@ -78,17 +79,19 @@ const CheckTable = () => {
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     isNumeric={column.isNumeric}
                   >
-                    {column.render("Header")}
-                    {/* 정렬 방향 표시 */}
-                    {column.isSorted ? (
-                      column.isSortedDesc ? (
-                        <FaAngleDown />
+                    <Box display={"flex"} alignItems={"center"}>
+                      {column.render("Header")}
+                      {/* 정렬 방향 표시 */}
+                      {column.isSorted ? (
+                        column.isSortedDesc ? (
+                          <FaAngleDown />
+                        ) : (
+                          <FaAngleUp />
+                        )
                       ) : (
-                        <FaAngleUp />
-                      )
-                    ) : (
-                      ""
-                    )}
+                        ""
+                      )}
+                    </Box>
                   </Th>
                 ))}
               </Tr>

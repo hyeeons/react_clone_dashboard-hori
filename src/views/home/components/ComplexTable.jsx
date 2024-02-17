@@ -1,7 +1,9 @@
 import {
+  Box,
   Card,
   CardHeader,
   Checkbox,
+  Progress,
   Table,
   TableContainer,
   Tbody,
@@ -15,6 +17,8 @@ import React from "react";
 import { tableDataComplex } from "../../../variables/tables";
 import { useSortBy, useTable } from "react-table";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+import { cellIcon } from "../../../theme/components/table";
+
 const ComplexTable = () => {
   const data = React.useMemo(() => tableDataComplex, []);
   const columns = React.useMemo(
@@ -44,16 +48,18 @@ const ComplexTable = () => {
               <Tr {...headerGroups.getHeaderGroupProps()}>
                 {headerGroups.headers.map((column) => (
                   <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                    {column.render("Header")}
-                    {column.isSorted ? (
-                      column.isSortedDesc ? (
-                        <FaAngleDown />
+                    <Box display={"flex"} alignItems={"center"}>
+                      {column.render("Header")}
+                      {column.isSorted ? (
+                        column.isSortedDesc ? (
+                          <FaAngleDown />
+                        ) : (
+                          <FaAngleUp />
+                        )
                       ) : (
-                        <FaAngleUp />
-                      )
-                    ) : (
-                      ""
-                    )}
+                        ""
+                      )}
+                    </Box>
                   </Th>
                 ))}
               </Tr>
@@ -70,7 +76,14 @@ const ComplexTable = () => {
                         {...cell.getCellProps()}
                         isNumeric={cell.column.isNumeric}
                       >
-                        {cell.render("Cell")}
+                        <Box display={"flex"} gap={"5px"} alignItems={"center"}>
+                          {cellIcon(cell.value)}
+                          {cell.column.id === "progress" ? (
+                            <Progress value={parseInt(cell.value)} />
+                          ) : (
+                            cell.render("Cell")
+                          )}
+                        </Box>
                       </Td>
                     );
                   })}

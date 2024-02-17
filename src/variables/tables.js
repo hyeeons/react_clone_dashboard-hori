@@ -41,24 +41,24 @@ export const tableDataComplex = [
     name: "Horizon UI PRO",
     status: "Approved",
     date: "18 Apr 2022",
-    progress: "50%",
+    progress: 50,
   },
   {
     name: "Horizon UI Free",
     status: "Disable",
     date: "18 Apr 2022",
-    progress: "20%",
+    progress: 20,
   },
   {
     name: "Marketplace",
     status: "Error",
     date: "20 May 2021",
-    progress: "70%",
+    progress: 70,
   },
   {
     name: "Weekly Updates",
     status: "Approved",
     date: "12 Jul 2021",
-    progress: "45%",
+    progress: 45,
   },
 ];
