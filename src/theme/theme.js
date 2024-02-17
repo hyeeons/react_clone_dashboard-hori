@@ -27,5 +27,6 @@ export default extendTheme(
   //   CardComponent // card component
   //   containerTheme,
   cardStyles,
-  tableStyles
+  tableStyles,
+  progressStyles
 );

@@ -23,18 +23,21 @@ export const progressStyles = {
       variants: {
         table: (props) => ({
           field: {
-            bg: "brand.500",
+            bg: "yellow.100",
             borderRadius: "16px",
             fontSize: "sm",
           },
           track: {
             borderRadius: "20px",
-            bg: mode("blue.50", "whiteAlpha.50")(props),
+            bg: mode("white", "whiteAlpha.50")(props),
             h: "8px",
             w: "54px",
           },
           thumb: {
             w: "250px",
+          },
+          filledTrack: {
+            bg: mode("brand.300", "brand.500")(props),
           },
         }),
       },

@@ -18,6 +18,7 @@ import { tableDataComplex } from "../../../variables/tables";
 import { useSortBy, useTable } from "react-table";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { cellIcon } from "../../../theme/components/table";
+import theme from "../../../theme/theme";
 
 const ComplexTable = () => {
   const data = React.useMemo(() => tableDataComplex, []);
@@ -79,7 +80,10 @@ const ComplexTable = () => {
                         <Box display={"flex"} gap={"5px"} alignItems={"center"}>
                           {cellIcon(cell.value)}
                           {cell.column.id === "progress" ? (
-                            <Progress value={parseInt(cell.value)} />
+                            <Progress
+                              variant="table"
+                              value={parseInt(cell.value)}
+                            />
                           ) : (
                             cell.render("Cell")
                           )}
