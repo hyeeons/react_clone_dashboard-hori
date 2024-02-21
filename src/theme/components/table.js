@@ -13,6 +13,13 @@ export const cellIcon = (cellText) => {
   } else {
     return null;
   }
+  //   <Flex alignItems="center" gap={2}>
+  //   {/* 조건부 아이콘 Approved, Disable, Error 일 경우 */}
+  //   {row.status === 'Approved' && <FaCheck color="green" />}
+  //   {row.status === 'Disable' && <FaTimes color="red" />}
+  //   {row.status === 'Error' && <FaExclamation color="orange" />}
+  //   {row.status}
+  // </Flex>
 };
 
 export const tableStyles = {
