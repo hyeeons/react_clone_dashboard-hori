@@ -1,6 +1,8 @@
 import { Box, Card, SimpleGrid, VStack } from "@chakra-ui/react";
 import History from "../../components/layout/History";
 import Banner from "./components/Banner";
+import styled from "styled-components";
+import MarketCardNft from "./components/MarketCard";
 
 const Marketplace = () => {
   return (
@@ -12,23 +14,32 @@ const Marketplace = () => {
         templateColumns={{ xl: "2.5fr 0.5fr" }}
       >
         <SimpleGrid spacing={"20px"}>
-          <Card bg={"lightblue"}>
+          <Card>
             <Banner />
           </Card>
-          <Card bg={"lightblue"}>
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            deleniti aliquam dignissimos, architecto praesentium illum vitae
-            nesciunt aspernatur iure delectus vel neque sequi quae ipsam natus
-            eligendi beatae laboriosam dolorum?{" "}
+          <Card bg={"none"}>
+            <TextBox>
+              <h2>Trending NFTs</h2>
+              <ul style={{ display: "flex" }}>
+                <li>Art</li>
+                <li>Music</li>
+                <li>Collectibles</li>
+                <li>Sports</li>
+              </ul>
+            </TextBox>
+            <MarketCardNft />
           </Card>
-          <Card bg={"lightblue"}>box</Card>
+          <Card bg={"lightblue"}>
+            <TextBox>
+              <h2>Recently Added</h2>
+            </TextBox>
+          </Card>
         </SimpleGrid>
         <SimpleGrid spacing={"20px"}>
-          <Card minW={{ xl: "406px" }} h={"466px"} bg={"lightgreen"}>
+          <Card minW={{ xl: "406px" }} bg={"lightgreen"}>
             box
           </Card>
-          <Card minW={{ xl: "406px" }} h={"724px"} bg={"lightgreen"}>
+          <Card minW={{ xl: "406px" }} bg={"lightgreen"}>
             box
           </Card>
         </SimpleGrid>
@@ -36,5 +47,21 @@ const Marketplace = () => {
     </>
   );
 };
+
+const TextBox = styled.div`
+  margin-top: 45px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  li {
+    color: #422afb;
+    margin: 0 20px 0 0;
+  }
+`;
 
 export default Marketplace;

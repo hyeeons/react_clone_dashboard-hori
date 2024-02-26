@@ -18,6 +18,21 @@ export const buttonStyles = {
       },
 
       variants: {
+        // likeHeart: () => ({
+        //   bg: "white",
+        //   width: "36px",
+        //   height: "36px",
+        //   borderRadius: "9999px",
+        // }),
+        placebid: () => ({
+          padding: "5px 24px",
+          color: ["white"],
+          fontSize: "14px",
+          bg: "#11047A",
+          fontWeight: "700",
+          marginTop: "10px",
+          borderRadius: "70px",
+        }),
         searchicon: () => ({
           fontSize: "16px",
           padding: "0",
