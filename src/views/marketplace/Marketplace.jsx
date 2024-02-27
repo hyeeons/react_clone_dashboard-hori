@@ -29,10 +29,11 @@ const Marketplace = () => {
             </TextBox>
             <MarketCardNft />
           </Card>
-          <Card bg={"lightblue"}>
-            <TextBox>
+          <Card bg={"none"}>
+            <TextBox2>
               <h2>Recently Added</h2>
-            </TextBox>
+              <MarketCardNft />
+            </TextBox2>
           </Card>
         </SimpleGrid>
         <SimpleGrid spacing={"20px"}>
@@ -64,4 +65,10 @@ const TextBox = styled.div`
   }
 `;
 
+const TextBox2 = styled(TextBox)`
+  flex-direction: column;
+  h2 {
+    margin-bottom: 20px;
+  }
+`;
 export default Marketplace;

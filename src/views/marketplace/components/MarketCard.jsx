@@ -6,11 +6,12 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
+import { breakpoints } from "../../../theme/foundations/breakpoints";
 
 const MarketCardNft = () => {
   const nftArr = [
     {
-      img: "https://images.unsplash.com/photo-1648019719755-4c0f66bfdf25?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://horizon-ui.com/horizon-ui-chakra/static/media/Nft1.0fea34cca5aed6cad72b.png",
       tit: "Abstract Colors",
       byname: "By Esthera Jackson",
       price: "0.91",
@@ -22,7 +23,7 @@ const MarketCardNft = () => {
         "https://horizon-ui.com/horizon-ui-chakra/static/media/avatar1.eeef2af6dfcd3ff23cb8.png",
     },
     {
-      img: "https://images.unsplash.com/photo-1707343843982-f8275f3994c5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://horizon-ui.com/horizon-ui-chakra/static/media/Nft2.7897c45d2601ee3adfb5.png",
       tit: "ETH AI Brain",
       byname: "By Nick Wilson",
       price: "0.54",
@@ -34,7 +35,7 @@ const MarketCardNft = () => {
         "https://horizon-ui.com/horizon-ui-chakra/static/media/avatar1.eeef2af6dfcd3ff23cb8.png",
     },
     {
-      img: "https://images.unsplash.com/photo-1706273931431-258a85d666c4?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://horizon-ui.com/horizon-ui-chakra/static/media/Nft3.3b3e6a4b3ada7618de6c.png",
       tit: "Mesh Gradients",
       byname: "By Will Smith",
       price: "1.57",
@@ -46,7 +47,7 @@ const MarketCardNft = () => {
         "https://horizon-ui.com/horizon-ui-chakra/static/media/avatar1.eeef2af6dfcd3ff23cb8.png",
     },
     {
-      img: "https://plus.unsplash.com/premium_photo-1694030762717-33e86020e461?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://horizon-ui.com/horizon-ui-chakra/static/media/Nft6.9ff5403226e81a6fd390.png",
       tit: "Orange House",
       byname: "By Greet Sally",
       price: "1.57",
@@ -72,7 +73,7 @@ const MarketCardNft = () => {
         spaceBetween={20}
         slidesPerView={3}
         loop={true}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 1000 }}
       >
         {nftArr.map(
           ({ img, tit, byname, price, userA, userB, userC }, index) => (
@@ -91,21 +92,23 @@ const MarketCardNft = () => {
                     )}
                   </button>
                 </div>
-                <div className="textBox">
-                  <p>{tit}</p>
-                  <span>{byname}</span>
-                </div>
-                <div className="group">
-                  <span className="length">+5</span>
-                  <span>
-                    <img src={userA} alt="" />
-                  </span>
-                  <span>
-                    <img src={userB} alt="" />
-                  </span>
-                  <span>
-                    <img src={userC} alt="" />
-                  </span>
+                <div className="textGroup">
+                  <div className="textBox">
+                    <p>{tit}</p>
+                    <span>{byname}</span>
+                  </div>
+                  <div className="group">
+                    <span className="length">+5</span>
+                    <span>
+                      <img src={userA} alt="" />
+                    </span>
+                    <span>
+                      <img src={userB} alt="" />
+                    </span>
+                    <span>
+                      <img src={userC} alt="" />
+                    </span>
+                  </div>
                 </div>
                 <div className="info">
                   <p>Current Bid: {price} ETH</p>
@@ -123,7 +126,7 @@ const MarketCardNft = () => {
 };
 const SwiperStyle = styled(Swiper)`
   width: 100%;
-  height: 386px;
+  height: 100%;
 `;
 
 const BoxStyle = styled.div`
@@ -132,16 +135,20 @@ const BoxStyle = styled.div`
   height: 100%;
   padding: 20px;
   border-radius: 20px;
+
   .imgBox {
     width: 100%;
-    height: 132.28px;
     margin-bottom: 20px;
     img {
       width: 100%;
-      height: 100%;
       object-fit: cover;
       border-radius: 20px;
     }
+  }
+  .textGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .textBox {
     p {
@@ -160,9 +167,13 @@ const BoxStyle = styled.div`
   .group {
     height: 32px;
     margin-top: 10px;
+    margin-right: 10px;
   }
   .info {
     margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 
     p {
       font-weight: 700;
@@ -211,7 +222,30 @@ const BoxStyle = styled.div`
     width: 22px;
     height: 22px;
   }
+  @media (max-width: ${breakpoints["2xl"]}) {
+    .textGroup {
+      flex-direction: column;
+    }
+    .info {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: ${breakpoints["xl"]}) {
+    .textGroup {
+      flex-direction: row;
+    }
+    .info {
+      flex-direction: row;
+    }
+  }
+  @media (max-width: ${breakpoints["lg"]}) {
+    .textGroup {
+      flex-direction: column;
+    }
+    .info {
+      flex-direction: column;
+    }
+  }
 `;
 
 export default MarketCardNft;
-// FF3666
