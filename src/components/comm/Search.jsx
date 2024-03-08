@@ -47,11 +47,10 @@ const Search = () => {
             <FiSearch />
           </InputLeftElement>
         </InputGroup>
-        <Spacer />
         <ButtonGroup alignItems={"center"} w={"42%"}>
           <Button variant={"searchicon"}>
             <FaRegBell />
-            <span className="blind">알림</span>
+            {/* <span className="blind">알림</span> */}
           </Button>
           <Button variant={"searchicon"}>
             <IoInformationCircleOutline />
@@ -59,10 +58,10 @@ const Search = () => {
           <Button variant={"searchicon"}>
             <FaPalette />
           </Button>
-          <Button variant={"searchicon"} w={"60px"}>
+          <Button variant={"searchicon"} w={30}>
             <FaUserCircle
-              width={"40px"}
-              height={"40px"}
+              width={40}
+              height={40}
               name="Prosper Otemuyiwa"
               src="https://bit.ly/prosper-baba"
             />
