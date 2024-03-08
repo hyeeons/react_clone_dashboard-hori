@@ -37,68 +37,7 @@ const MainDashboard = (props) => {
         spacing={"20px"}
         w={"100%"}
       >
-        <MiniSt
-          name="Earnings"
-          value="$350.4"
-          impleGrid
-          startContent={
-            <IconBox
-              w={"56px"}
-              h={"56px"}
-              bg={"bgDefault"}
-              icon={<MdBarChart />}
-            />
-          }
-        />
-        <MiniSt
-          name="Spend this month"
-          value="$642.39"
-          startContent={
-            <IconBox
-              w={"56px"}
-              h={"56px"}
-              bg={"bgDefault"}
-              icon={<FcDoughnutChart />}
-            />
-          }
-        />
-        <MiniSt name="Sales" value="$574.34" />
-        <MiniSt
-          name="Your balance"
-          value="$1,000"
-          endContent={
-            <IconBox
-              w={"56px"}
-              h={"56px"}
-              bg={"bgDefault"}
-              icon={<FcAreaChart />}
-            />
-          }
-        />
-        <MiniSt
-          name="New Tasks"
-          value="154"
-          startContent={
-            <IconBox
-              w={"56px"}
-              h={"56px"}
-              bg={"bgDefault"}
-              icon={<FcComboChart />}
-            />
-          }
-        />
-        <MiniSt
-          name="Total Projects"
-          value="2935"
-          startContent={
-            <IconBox
-              w={"56px"}
-              h={"56px"}
-              bg={"bgDefault"}
-              icon={<FcFlowChart />}
-            />
-          }
-        />
+        <MiniSt />
       </SimpleGrid>
 
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} w={"100%"}>
