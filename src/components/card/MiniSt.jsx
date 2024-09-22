@@ -9,15 +9,19 @@ import {
 import { MdOutlineBarChart } from "react-icons/md";
 import { FaDollarSign } from "react-icons/fa";
 import { LuCheckCircle } from "react-icons/lu";
+import { BsDatabaseFillCheck } from "react-icons/bs";
+import { FaCoins } from "react-icons/fa";
+
 
 const MiniSt = () => {
   const MiniStArr = [
     { icon: <MdOutlineBarChart />, text: "Earnings", value: "$350.4" },
     { icon: <FaDollarSign />, text: "Spend this month", value: "$642.39" },
-    { icon: "", text: "Sales", value: "$574.34" },
-    { icon: <MdOutlineBarChart />, text: "Your balance", value: "$1,000" },
+    { icon: <BsDatabaseFillCheck />, text: "Sales", value: "$574.34" },
+    { icon: <FaCoins />, text: "Your balance", value: "$1,000" },
     { icon: <LuCheckCircle />, text: "New Tasks", value: "154" },
     { icon: <MdOutlineBarChart />, text: "Total Projects", value: "2935" },
+	
   ];
   return (
     <>
