@@ -35,7 +35,7 @@ const MiniSt = () => {
                 bg={"secondaryGray.300"}
                 w={"56px"}
                 h={"56px"}
-                padding={"8%"}
+                padding={"5%"}
                 borderRadius={"50%"}
                 fontSize={"30px"}
                 color={"brandTabs.500"}
