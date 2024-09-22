@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react_clone_dashboard-hori/static/css/main.00b3303b.css",
-    "main.js": "/react_clone_dashboard-hori/static/js/main.a333118e.js",
+    "main.js": "/react_clone_dashboard-hori/static/js/main.2f1eaaa3.js",
     "index.html": "/react_clone_dashboard-hori/index.html",
     "main.00b3303b.css.map": "/react_clone_dashboard-hori/static/css/main.00b3303b.css.map",
-    "main.a333118e.js.map": "/react_clone_dashboard-hori/static/js/main.a333118e.js.map"
+    "main.2f1eaaa3.js.map": "/react_clone_dashboard-hori/static/js/main.2f1eaaa3.js.map"
   },
   "entrypoints": [
     "static/css/main.00b3303b.css",
-    "static/js/main.a333118e.js"
+    "static/js/main.2f1eaaa3.js"
   ]
 }
