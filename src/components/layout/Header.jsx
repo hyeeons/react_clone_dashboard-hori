@@ -13,7 +13,7 @@ const Header = () => {
         top={0}
         bottom={0}
         zIndex={1000}
-        left={{ sm: "-100%", xl: 0 }}
+        left={{ base:"-100%", xl: 0 }}
         bg={"white"}
         w={292}
       >
