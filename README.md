@@ -16,7 +16,7 @@ Chakra UI 라이브러리를 활용하여 작업을 진행중입니다.
 
 #### 💻 원본 사이트 
 
-클론코딩 원본 사이트 Horizon UI Dashboard 👉[  보러가기 ](https://hyeeons.github.io/react_clone_dashboard-hori/](https://horizon-ui.com/horizon-ui-chakra/?ref=readme-horizon#/admin/default)https://horizon-ui.com/horizon-ui-chakra/?ref=readme-horizon#/admin/default) 
+클론코딩 원본 사이트 Horizon UI Dashboard 👉[  보러가기 ](https://horizon-ui.com/horizon-ui-chakra/#/admin/default) 
 <br><br>
 
 ### 📌 Main Dashboard의 Task 부분 체크박스 기능
